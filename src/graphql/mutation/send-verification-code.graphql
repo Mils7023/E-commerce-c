@@ -1,0 +1,7 @@
+
+mutation sendEmailVerificationCode($input: SendEmailOtp){
+  sendEmailVerificationCode(input: $input){
+    message
+    email
+  }
+}

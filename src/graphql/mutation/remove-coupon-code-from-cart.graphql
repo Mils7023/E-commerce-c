@@ -1,0 +1,42 @@
+mutation RemoveCouponFromCart($input: RemoveCouponFromCartInput){
+    removeCouponFromCart(input:$input){
+        cart {
+            id
+            applied_coupons {
+                code
+            }
+            total_quantity
+            prices {
+                estimatedShipping{
+                    amount {
+                        currency
+                        value
+                        __typename
+                    }
+                carrier_code
+                method_code
+                method_title
+                __typename
+                }
+                subtotal_excluding_tax {
+                currency
+                value
+                }
+                subtotal_including_tax {
+                currency
+                value
+                }
+                subtotal_with_discount_excluding_tax {
+                    value
+                    currency
+                    __typename
+                }
+            }
+            selected_payment_method {
+                code
+            }
+            email
+            __typename
+        }
+    }
+}

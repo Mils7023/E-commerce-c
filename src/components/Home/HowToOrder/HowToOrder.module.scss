@@ -1,0 +1,16 @@
+@import "../../../styles/colors.scss";
+
+@media (max-width: 1399.98px) {
+  .how_to_order {
+    img {
+      max-width: 80px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .how_to_order_arrow {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}

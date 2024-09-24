@@ -1,0 +1,286 @@
+@import "../../../styles/colors.scss";
+.blog_detail_main {
+  .blog_detail_wrapper {
+    .blog_detail {
+      .blog_detail_padding_t {
+        padding-top: 50px;
+      }
+      .blog_detail_padding {
+        padding: 50px 0;
+      }
+      .blog_line_height {
+        line-height: 34px !important;
+      }
+      .blog_detail_content {
+        .blog_detail_img_src {
+          border-radius: 10px;
+        }
+        .blog_title_btn {
+          padding: 18px 40px;
+          min-width: 230px;
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .blog_date_btn {
+          padding: 18px 40px;
+          min-width: 230px;
+          border-radius: 4px;
+          border: 2px solid $form-border;
+          color: $form-border;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        iframe {
+          border-radius: 10px;
+        }
+      }
+      .trending_blog_wrapper {
+        background-color: $third-shade1;
+        position: sticky;
+        top: 0;
+        overflow: auto;
+        max-height: 845px;
+        .trending_blogs {
+          padding: 24px 15px 24px 40px;
+          .blog_col {
+            overflow: hidden;
+            border-bottom: 1px solid $main-black;
+            &:nth-last-child(1) {
+              border-bottom: 0;
+            }
+            &:hover {
+              .blog_content {
+                .blog_link:after {
+                  width: 80%;
+                  opacity: 1;
+
+                  svg {
+                    fill: $secondary-color;
+                  }
+                }
+              }
+            }
+            .blog_image {
+              border-radius: 12px;
+              overflow: hidden;
+
+              img {
+                min-height: 235px;
+                max-height: 235px;
+              }
+            }
+            .blog_content {
+              padding: 10px 0 0;
+
+              .blog_label {
+                background-color: $primary-color;
+                padding: 5px 10px;
+                border-radius: 4px;
+              }
+              .blog_link {
+                &:after {
+                  content: "";
+                  border-bottom: 2px solid $primary-color;
+                  width: 0;
+                  transition: all 400ms ease-in-out;
+                  opacity: 0;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1499.98px) {
+  .blog_detail_main {
+    .blog_detail_wrapper {
+      .blog_detail {
+        .blog_detail_padding_t {
+          padding-top: 35px;
+        }
+        .blog_detail_padding {
+          padding: 35px 0;
+        }
+        .blog_line_height {
+          line-height: 30px !important;
+        }
+        .trending_blog_wrapper {
+          max-height: 750px;
+          .trending_blogs {
+            padding: 24px 8px 24px 33px;
+            .blog_col {
+              .blog_image {
+                img {
+                  min-height: 200px;
+                  max-height: 200px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .blog_detail_main {
+    .blog_detail_wrapper {
+      .blog_detail {
+        .blog_line_height {
+          line-height: 28px !important;
+        }
+        .blog_detail_content {
+          .blog_title_btn {
+            padding: 14px 35px;
+            min-width: 180px;
+          }
+          .blog_date_btn {
+            padding: 14px 35px;
+            min-width: 180px;
+          }
+        }
+        .trending_blog_wrapper {
+          .trending_blogs {
+            padding: 24px 0px 24px 25px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .blog_detail_main {
+    .blog_detail_wrapper {
+      .blog_detail {
+        .blog_detail_padding_t {
+          padding-top: 28px;
+        }
+        .blog_detail_padding {
+          padding: 28px 0;
+        }
+        .blog_line_height {
+          line-height: 22px !important;
+        }
+        .trending_blog_wrapper {
+          max-height: 670px;
+          .trending_blogs {
+            .blog_col {
+              .blog_image {
+                img {
+                  min-height: 165px;
+                  max-height: 165px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .blog_detail_main {
+    .blog_detail_wrapper {
+      .blog_detail {
+        .blog_detail_padding_t {
+          padding-top: 22px;
+        }
+        .blog_detail_padding {
+          padding: 22px 0;
+        }
+        .blog_line_height {
+          line-height: 19px !important;
+        }
+        .blog_detail_content {
+          .blog_title_btn {
+            padding: 10px 20px;
+            min-width: 140px;
+          }
+          .blog_date_btn {
+            padding: 10px 20px;
+            min-width: 140px;
+          }
+        }
+        .trending_blog_wrapper {
+          .trending_blogs {
+            .blog_col {
+              .blog_image {
+                img {
+                  min-height: 165px;
+                  max-height: 165px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog_detail_main {
+    .blog_detail_wrapper {
+      .blog_detail {
+        .blog_detail_padding_t {
+          padding-top: 15px;
+        }
+        .blog_detail_padding {
+          padding: 15px 0;
+        }
+        .trending_blog_wrapper {
+          max-height: 715px;
+          .trending_blogs {
+            .blog_col {
+              &:nth-last-child(-n + 2) {
+                border-bottom: 0;
+              }
+              .blog_image {
+                img {
+                  min-height: 190px;
+                  max-height: 190px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .blog_detail_main {
+    .blog_detail_wrapper {
+      .blog_detail {
+        .trending_blog_wrapper {
+          max-height: 690px;
+          .trending_blogs {
+            .blog_col {
+              &:nth-last-child(2) {
+                border-bottom: 1px solid $main-black;
+              }
+              .blog_image {
+                img {
+                  min-height: 190px;
+                  max-height: 190px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

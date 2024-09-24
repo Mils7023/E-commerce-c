@@ -1,0 +1,153 @@
+query GetAllOrder(
+  $currentPage: Int
+  $pageSize: Int
+  $filter: CustomerOrdersFilterInput
+) {
+  customer {
+    orders(filter: $filter, pageSize: $pageSize, currentPage: $currentPage) {
+      total_count
+      items {
+        id
+        number
+        order_date
+        status
+        items {
+          id
+          product_name
+          product_sku
+          product_url_key
+          product_sale_price {
+            value
+            currency
+          }
+          product {
+            small_image {
+              url
+              label
+            }
+            thumbnail {
+              label
+              url
+            }
+          }
+          selected_options {
+            label
+            value
+          }
+          quantity_ordered
+          quantity_invoiced
+          quantity_shipped
+        }
+        shipping_method
+        payment_methods {
+          name
+          type
+          additional_data {
+            name
+            value
+          }
+        }
+        billing_address {
+          city
+          country_code
+          firstname
+          lastname
+          middlename
+          postcode
+          region
+          street
+          telephone
+          __typename
+        }
+        shipping_address {
+          city
+          country_code
+          firstname
+          lastname
+          middlename
+          postcode
+          region
+          street
+          telephone
+          __typename
+        }
+        applied_coupons {
+          code
+        }
+        carrier
+        shipments {
+          id
+          number
+          items {
+            product_name
+            quantity_shipped
+          }
+        }
+        total {
+          base_grand_total {
+            value
+            currency
+          }
+          grand_total {
+            value
+            currency
+          }
+          total_tax {
+            currency
+            value
+          }
+          subtotal {
+            value
+            currency
+          }
+          taxes {
+            amount {
+              value
+              currency
+            }
+            title
+            rate
+          }
+          total_shipping {
+            currency
+            value
+          }
+          shipping_handling {
+            amount_including_tax {
+              currency
+              value
+            }
+            amount_excluding_tax {
+              currency
+              value
+            }
+            total_amount {
+              currency
+              value
+            }
+            taxes {
+              amount {
+                currency
+                value
+              }
+              title
+              rate
+            }
+          }
+          discounts {
+            amount {
+              value
+              currency
+            }
+            label
+          }
+        }
+      }
+      page_info {
+        current_page
+        page_size
+        total_pages
+      }
+    }
+  }
+}

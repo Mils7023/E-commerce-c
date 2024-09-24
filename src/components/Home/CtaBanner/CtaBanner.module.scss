@@ -1,0 +1,60 @@
+@import "../../../styles/colors.scss";
+
+.cta_main {
+  .cta_wrapper {
+    background-color: $main-product-btn-color3;
+    background-image: url("#{$media_path}/cta/ct-bg.png");
+    border-radius: 12px;
+    padding: 40px;
+    .cta_left {
+      border-radius: 12px;
+      height: 100%;
+      overflow: hidden;
+    }
+    .cta_left {
+      img {
+        transition: all 400ms ease-in-out;
+      }
+    }
+    &:hover {
+      .cta_left {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .cta_main {
+    .cta_wrapper {
+      padding: 20px;
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .cta_main {
+    .cta_wrapper {
+      h2 {
+        font-size: 32px !important;
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .cta_main {
+    .cta_wrapper {
+      h2 {
+        font-size: 28px !important;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .cta_main {
+    .cta_wrapper {
+      padding: 20px 20px 40px 20px;
+    }
+  }
+}

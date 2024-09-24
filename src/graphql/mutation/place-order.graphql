@@ -1,0 +1,13 @@
+mutation PlaceOrder($cartId: String!) {
+  placeOrderV2(input: { cart_id: $cartId }) {
+    orderV2 {
+      id
+      order_number
+      token
+    }
+    errors {
+      message
+      code
+    }
+  }
+}

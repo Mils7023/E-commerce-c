@@ -1,0 +1,7 @@
+mutation DeleteFiles($file_path: String!) {
+  deleteFiles(input: { file_path: $file_path }) {
+    items {
+      file_path
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import "../../../styles/colors.scss";
+.superheroes_products_col_wrapper {
+  .superheroes_products_col {
+    position: relative;
+    border-radius: 24px;
+    transition: all 1s ease-in-out;
+
+    .superheroes_image {
+      opacity: 1;
+      display: block;
+      transform: rotateY(0deg);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-duration: 1s;
+      transition-property: transform, opacity;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .superheroes_products_hover_col {
+      transform: rotateY(-180deg);
+      display: block;
+      opacity: 0;
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-duration: 1s;
+      transition-property: transform, opacity;
+    }
+
+    .superheroes_products_touch {
+      background-color: $main-white-shade5;
+      right: 50px;
+      bottom: 50px;
+      border-radius: 10px;
+      backdrop-filter: blur(8.17px);
+      width: 80px;
+      height: 70px;
+    }
+
+    &:hover {
+      .superheroes_products_hover_col {
+        opacity: 1;
+        overflow: hidden;
+        transform: rotateY(0deg);
+        box-shadow: 5px 5px 24px 0px $main-black-shade2;
+      }
+
+      .superheroes_image {
+        opacity: 0;
+        transform: rotateY(180deg);
+      }
+
+      .superheroes_products_touch {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .superheroes_products_col_wrapper {
+    .superheroes_products_col {
+      .superheroes_products_touch {
+        background-color: $main-white-shade5;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 10px;
+        backdrop-filter: blur(8.17px);
+        width: 70px;
+        height: 60px;
+      }
+    }
+  }
+
+  .superheroes_image {
+    height: 450px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .superheroes_products_col_wrapper {
+    .superheroes_products_col {
+      max-height: 510px;
+      .superheroes_image {
+        max-height: 510px;
+        object-fit: cover;
+      }
+      .superhero_hover_card_image {
+        max-height: 370px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .superheroes_products_col_wrapper {
+    .superheroes_products_col {
+      .superheroes_products_touch {
+        right: 25px;
+        bottom: 25px;
+        width: 60px;
+        height: 50px;
+        padding: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

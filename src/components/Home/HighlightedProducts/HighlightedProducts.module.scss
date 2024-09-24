@@ -1,0 +1,113 @@
+@import "../../../styles/colors.scss";
+
+/* ==========================================================
+                     HIGHLIGHTED SECTION SOC
+========================================================== */
+.hightlighted_section {
+  .hightlighted_main {
+    padding: 50px 0 66px;
+  }
+}
+.highlighted_col {
+  .hightlighted_bg {
+    width: 132px;
+    height: 132px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      margin-top: -25px;
+      transition: all 400ms ease-in-out;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &.hightlighted_orange {
+      background-color: #ffeeda;
+    }
+    &.hightlighted_green {
+      background-color: #dff9f8;
+    }
+    &.hightlighted_blue {
+      background-color: #c9e8fd;
+    }
+    &.hightlighted_yellow {
+      background-color: #fffcdb;
+    }
+    &.hightlighted_pink {
+      background-color: #ffe7f7;
+    }
+  }
+
+  &:hover {
+    .hightlighted_bg {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media (max-width: 1599.98px) {
+  .highlighted_col {
+    .hightlighted_bg {
+      width: 125px;
+      height: 125px;
+    }
+  }
+}
+
+@media (max-width: 1499.98px) {
+  .highlighted_col {
+    .hightlighted_bg {
+      width: 116px;
+      height: 116px;
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .highlighted_col {
+    .hightlighted_bg {
+      width: 111px;
+      height: 111px;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .hightlighted_section {
+    .hightlighted_main {
+      padding: 24px 0 50px;
+    }
+  }
+  .highlighted_col {
+    .hightlighted_bg {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .hightlighted_section {
+    .hightlighted_main {
+      padding: 16px 0 40px;
+    }
+  }
+  .highlighted_col {
+    .hightlighted_bg {
+      width: 90px;
+      height: 90px;
+
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+}

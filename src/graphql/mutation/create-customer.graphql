@@ -1,0 +1,5 @@
+mutation createCustomerV3($input: VerifyEmailOtp) {
+  createCustomerV3(input: $input) {
+    token
+  }
+}

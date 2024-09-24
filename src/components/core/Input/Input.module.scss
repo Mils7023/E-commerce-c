@@ -1,0 +1,179 @@
+@import "../../../styles/colors.scss";
+
+.formGroup {
+  .formLabel {
+    color: $main-black;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    padding-bottom: 18px;
+    display: inline-block;
+  }
+
+  .formControl {
+    padding: 17px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: $main-black;
+    border: 2px solid $form-border;
+    font-weight: 500;
+    width: 100%;
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $main-black;
+      -webkit-box-shadow: 0 0 0px 40rem $main-product-card inset;
+      border-color: $primary-color;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      color: $main-black-shade3;
+      font-weight: 500;
+    }
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      background-color: $main-white;
+      color: $secondary-color;
+    }
+  }
+
+  &.mobileFormGroup {
+    .countryFlag {
+      font-size: 18px;
+      color: $main-black-shade3;
+      border-right: 2px solid $form-border;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      bottom: 2px;
+      padding: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 75px;
+    }
+    .formControl {
+      padding-left: 95px;
+    }
+  }
+
+  // OTP VERIFICATION
+  .otpContainer {
+    gap: 14px;
+    .formControl {
+      width: 56px;
+    }
+  }
+}
+
+@media (max-width: 1499.98px) {
+  .formGroup {
+    .formLabel {
+      font-size: 17px;
+      padding-bottom: 14px;
+    }
+
+    .formControl {
+      padding: 15px 20px;
+      font-size: 16px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .formGroup {
+    .formControl {
+      padding: 15px 20px;
+      font-size: 15px;
+      border-width: 1px;
+
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
+
+    &.mobileFormGroup {
+      .countryFlag {
+        font-size: 17px;
+        width: 75px;
+      }
+      .formControl {
+        padding-left: 95px;
+      }
+    }
+
+    // OTP VERIFICATION
+    .otpContainer {
+      .formControl {
+        width: 50px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .formGroup {
+    .formLabel {
+      font-size: 15px;
+      padding-bottom: 12px;
+    }
+    .formControl {
+      padding: 13px 18px;
+      font-size: 14px;
+      border-width: 1px;
+      border-radius: 8px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    &.mobileFormGroup {
+      .countryFlag {
+        font-size: 14px;
+        width: 55px;
+        border-width: 1px;
+        top: 1px;
+        bottom: 1px;
+      }
+      .formControl {
+        padding-left: 73px;
+      }
+    }
+
+    // OTP VERIFICATION
+    .otpContainer {
+      gap: 8px;
+      .formControl {
+        width: 48px;
+        padding: 15px 13px;
+        display: flex;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.passwordContainer {
+  position: relative;
+}
+
+.formControl {
+  padding-right: 40px; /* Add padding to the right so the button doesn't overlap the text */
+}
+
+.togglePasswordButton {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust as needed to match your design */
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

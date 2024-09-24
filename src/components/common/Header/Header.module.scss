@@ -1,0 +1,590 @@
+@import "../../../styles/colors.scss";
+
+/* ==========================================================
+                    HEADER SECTION SOC
+  ========================================================= */
+
+.site-header {
+  position: relative;
+  z-index: 999;
+}
+/*.header-main{width: 100%; position: fixed; z-index:999; transition: all 0.5s linear; top:0 !important; }*/
+.header-main.sticky {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background: #fff;
+  transform: translateY(0%) !important;
+}
+.header-main {
+  transition: all 400ms ease-in-out;
+}
+.header-main.active {
+  transform: translateY(-100%);
+}
+
+.main_header {
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  transition: all 500ms ease-in-out;
+
+  &.main_header_hidden {
+    // top: -278px;
+    transform: translateY(-100%);
+  }
+  &.main_header_show {
+    // top: 0;
+    transform: translateY(0);
+    box-shadow: 0px 0px 10px 1px $main-black-shade1;
+  }
+
+  // SEARCH BAR DESIGN STARTS HERE
+  .searchBar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 4px 22px 0px $main-black-shade1;
+    z-index: 9;
+    padding: 40px 0;
+    border-radius: 0 0 14px 14px;
+    .recentSearch {
+      .recentSearch_products_row {
+        .recentSearch_products_col {
+          &:hover {
+            .recentSearch_product_img {
+              img {
+                transform: scale(1.1);
+              }
+            }
+          }
+          .recentSearch_product_img {
+            width: 160px;
+            overflow: hidden;
+            border: 1px solid $grey-color;
+            img {
+              transition: all 400ms ease-in-out;
+            }
+          }
+          .recentSearch_product_content {
+            width: calc(100% - 160px);
+            padding-left: 24px;
+
+            p {
+              line-height: 130% !important;
+            }
+
+            .recentSearch_product_price {
+              .recentSearch_product_price_label {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* HEADER SEARCHBAR */
+.header_top {
+  background-image: url("#{$media_path}/header-paint-img.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 68px 0 30px;
+  background-color: $main-white;
+}
+.header_search .header_search_wrapper input {
+  background: $third-color;
+  border-radius: 30px;
+  min-width: 750px;
+  padding: 18px 150px 18px 40px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Inter";
+  color: $main-black;
+  border: 1px solid transparent;
+}
+.header_search .header_search_wrapper .search_btn {
+  border-radius: 40px;
+  min-width: 125px;
+}
+.header_search .header_search_wrapper input::placeholder {
+  font-size: 18px;
+  color: $main-black-shade7;
+  font-weight: 400;
+  font-family: "Inter";
+}
+.header_search .header_search_wrapper input:focus {
+  border-color: $primary-color;
+}
+
+/* TOP HEADER */
+.header_top .header_icons {
+  gap: 40px;
+}
+.header_top .header_icons .cart_count {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  top: 5px;
+  z-index: 9;
+}
+
+/* BOTTOM HEADER */
+.header_bottom {
+  background-color: $primary-color;
+}
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header_menu .header_menu_list .header_menu_link {
+  color: $main-white;
+  font-size: 20px;
+  position: relative;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 0;
+}
+.header_menu .header_menu_list .header_menu_link:after {
+  content: "";
+  border-bottom: 3px solid $main-white;
+  position: absolute;
+  top: calc(100% - 3px);
+  left: 0;
+  right: 0;
+  width: 0;
+  margin: auto;
+  transition: all 400ms ease-in-out;
+}
+.header_menu .header_menu_list .header_menu_link:hover:after {
+  width: 100%;
+}
+
+.header_menu .header_menu_list .header_submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  background-color: $main-white;
+  box-shadow: 0px 5px 10px 1px $main-black-shade1;
+  padding: 30px;
+  // opacity: 0;
+  // visibility: hidden;
+  transition: all 400ms ease-in;
+  max-height: 450px;
+  overflow: auto;
+  display: none;
+}
+
+@media (min-height: 700px) {
+  .header_menu .header_menu_list .header_submenu {
+    max-height: 600px;
+  }
+}
+
+.header_menu .header_menu_list:hover .header_submenu {
+  // opacity: 1;
+  // visibility: visible;
+  display: block;
+}
+.header_menu .header_menu_list .menu_dropdown {
+  transition: all 400ms ease;
+}
+.header_menu .header_menu_list:hover .menu_dropdown {
+  transform: rotate(180deg);
+}
+
+// TOPPERS SHAPE DROPDOWN
+
+.toppers_shape_submenu_wrapper {
+  .toppers_shape_box {
+    background-color: $primary-color-shade3;
+    border: 1px solid $primary-color;
+    text-align: center;
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    .toppers_shape_title {
+      background-color: $main-white;
+      font-size: 14px; 
+      color: $primary-color;
+      text-transform: uppercase;
+      padding: 15px;
+      font-weight: 500;
+    }
+    .toppers_shape_image {
+      padding: 30px;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      transition: all 400ms ease-in-out;
+      max-height: 150px;
+      width: auto;
+    }
+  }
+}
+
+// CAKE TOPPERS MENU
+.cake_toppers_submenu_wrapper {
+  .cake_toppers_left {
+    border-right: 1px solid $primary-color;
+    padding-right: 80px;
+    .cake_toppers_left_img {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+  }
+  .cake_toppers_ul {
+    .cake_toppers_li {
+      .cake_toppers_item {
+        font-size: 14px;
+        color: $main-black;
+        padding-left: 18px;
+        position: relative;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        &::after {
+          content: "";
+          background-color: $primary-color;
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          margin: auto;
+        }
+      }
+    }
+  }
+  .cake_toppers_right {
+    padding-left: 80px;
+    padding-right: 80px;
+    .cake_toppers_special {
+      .cake_toppers_special_title {
+        border-bottom: 1px solid $primary-color;
+      }
+      .cake_special_toppers_box {
+        width: 130px;
+        height: 130px;
+        .cake_special_toppers_name {
+          background: $main-white-shade5;
+          margin: auto;
+          padding: 8px 5px;
+          margin: 10px;
+
+          span {
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+// OUR WORL MENU
+.header_menu .header_menu_list .our_world_submenu {
+  padding: 10px 20px;
+  left: unset;
+  width: auto;
+  .our_world_submenu_list {
+    li {
+      width: 100%;
+      a {
+        font-size: 16px;
+        width: 100%;
+        color: $main-black-shade5;
+        font-weight: 500;
+        padding: 10px 10px;
+        border-bottom: 1px solid $main-black-shade1;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      &:last-child {
+        a {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .header_logo {
+    max-width: 160px;
+  }
+  .header_top {
+    background-size: 100% 40px;
+    padding: 35px 0 10px;
+  }
+  .header_search .header_search_wrapper input {
+    padding: 15px 150px 15px 40px;
+    min-width: 650px;
+    font-size: 17px;
+
+    &::placeholder {
+      font-size: 17px;
+    }
+  }
+
+  .header_search .header_search_wrapper .search_btn {
+    padding: 10px 40px;
+  }
+
+  .header_menu .header_menu_list .header_menu_link {
+    padding: 20px 0;
+  }
+  /* TOP HEADER */
+  .header_top .header_icons {
+    gap: 30px;
+  }
+
+  .header_top .header_icons {
+    gap: 20px;
+
+    button {
+      svg {
+        max-width: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1599.98px) {
+  .header_search .header_search_wrapper input {
+    font-size: 16px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  .toppers_shape_submenu_wrapper {
+    .toppers_shape_box {
+      .toppers_shape_title {
+        font-size: 13px;
+        padding: 15px 10px;
+      }
+      .toppers_shape_image {
+        min-height: 230px;
+      }
+    }
+  }
+  .header_top {
+    background-size: 100% 35px;
+  }
+}
+
+@media (max-width: 1499.98px) {
+  .header_menu .header_menu_list .header_submenu {
+    padding: 20px;
+  }
+  .header_menu .header_menu_list .header_menu_link {
+    font-size: 18px;
+  }
+  .toppers_shape_submenu_wrapper {
+    .toppers_shape_box {
+      .toppers_shape_title {
+        font-size: 13px;
+        padding: 15px 8px;
+      }
+    }
+  }
+
+  .cake_toppers_submenu_wrapper {
+    .cake_toppers_left {
+      padding-right: 30px;
+    }
+    .cake_toppers_right {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .cake_toppers_special {
+        .cake_special_toppers_box {
+          width: 100px;
+          height: 100px;
+          .cake_special_toppers_name {
+            margin: 5px;
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .header_search .header_search_wrapper input {
+    min-width: 600px;
+    font-size: 16px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  .header_top .header_icons {
+    gap: 20px;
+  }
+
+  .main_header {
+    // SEARCH BAR DESIGN STARTS HERE
+    .searchBar {
+      .recentSearch {
+        .recentSearch_products_row {
+          .recentSearch_products_col {
+            .recentSearch_product_img {
+              width: 140px;
+            }
+            .recentSearch_product_content {
+              width: calc(100% - 140px);
+              padding-left: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header_search .header_search_wrapper input {
+    min-width: 550px;
+    font-size: 16px;
+    padding: 15px 150px 15px 25px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  .header_top .header_icons {
+    gap: 15px;
+  }
+
+  .header_logo {
+    max-width: 150px;
+  }
+
+  .header_menu .header_menu_list .header_menu_link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header_menu .header_menu_list {
+    .header_menu_link {
+      font-size: 15px;
+      gap: 5px;
+    }
+    .menu_dropdown {
+      max-width: 13px;
+    }
+  }
+  .header_search .header_search_wrapper {
+    input {
+      min-width: 400px;
+      font-size: 14px;
+      padding: 13px 70px 13px 20px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    .search_btn {
+      min-width: 60px;
+      padding: 10px;
+    }
+  }
+  .header_top .header_icons {
+    gap: 10px;
+    button {
+      svg {
+        max-width: 30px;
+      }
+    }
+  }
+
+  .main_header {
+    // SEARCH BAR DESIGN STARTS HERE
+    .searchBar {
+      .recentSearch {
+        .recentSearch_products_row {
+          .recentSearch_products_col {
+            .recentSearch_product_img {
+              width: 100px;
+            }
+            .recentSearch_product_content {
+              width: calc(100% - 100px);
+              padding-left: 10px;
+              p {
+                line-height: 120% !important;
+              }
+
+              .recentSearch_product_price {
+                svg {
+                  max-width: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// MOBILE HEADER
+
+.mobile_header_right {
+  svg {
+    max-width: 30px;
+  }
+}
+.mobile_header {
+  background-color: $main-white;
+  background-image: url("#{$media_path}/header-paint-img.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 40px 0 15px;
+}
+@media (max-width: 575px) {
+  .mobile_header {
+    .header_logo {
+      max-width: 120px;
+    }
+  }
+  .mobile_header_right {
+    svg {
+      max-width: 25px;
+    }
+  }
+  .mobile_header {
+    padding: 25px 0 15px;
+  }
+}

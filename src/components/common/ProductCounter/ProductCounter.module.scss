@@ -1,0 +1,76 @@
+@import "../../../styles/colors.scss";
+
+.productCountBtn {
+  display: flex;
+  border: 2px solid $main-black;
+  border-radius: 50rem;
+  .productCountNumber {
+    border-width: 0px 2px;
+    border-color: $main-black;
+    border-style: solid;
+    padding: 11px 14px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .productCount {
+    padding: 11px 14px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+.productCountBtnForMini {
+  display: flex;
+  border-radius: 50rem;
+  padding: 0 10px;
+  background: linear-gradient(
+    to right,
+    $main-product-btn-color2,
+    $main-product-btn-color1
+  );
+  .productCountNumber {
+    padding: 8px 14px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $main-white;
+  }
+  .productCount {
+    padding: 8px 14px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: $main-white;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .productCountBtnForMini {
+    .productCountNumber {
+      padding: 7px 12px;
+      font-size: 18px;
+      font-weight: 600;
+      color: $main-white;
+    }
+    .productCount {
+      padding: 7px 12px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      color: $main-white;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .productCountBtnForMini {
+    .productCountNumber {
+      padding: 7px 8px;
+      font-size: 16px;
+    }
+    .productCount {
+      padding: 7px 8px;
+      font-size: 16px;
+    }
+  }
+}

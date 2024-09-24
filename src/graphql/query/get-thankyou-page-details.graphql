@@ -1,0 +1,13 @@
+query getThankyouPageDetails($input: OrderIdInput) {
+  getThankyouPageDetails(input: $input) {
+    userEmail
+    firstname
+    lastname
+    isGuestCustomer
+    paymentMethod
+    lastCommentHistory
+    grandtotal
+    orderstatus
+    order_number
+  }
+}

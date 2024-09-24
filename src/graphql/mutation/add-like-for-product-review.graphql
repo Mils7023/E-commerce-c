@@ -1,0 +1,3 @@
+mutation addLikeForProductReview($reviewId: Int!) {
+  addLikeForProductReview(review_detail_id: $reviewId)
+}

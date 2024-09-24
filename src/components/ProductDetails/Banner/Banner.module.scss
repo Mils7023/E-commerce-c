@@ -1,0 +1,322 @@
+@import "../../../styles/colors.scss";
+
+.global_header_spacing {
+  padding-top: 278px;
+}
+.banner_main {
+  padding-top: 50px;
+  .banner_wrapper {
+    .banner_breadcrum {
+      padding-bottom: 80px;
+      .banner_breadcrum_a {
+        color: $main-black;
+        opacity: 0.8;
+
+        &.banner_breadcrum_active {
+          opacity: 1;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .product_details {
+      display: flex;
+      flex-wrap: wrap;
+      .product_details_image {
+        width: 45%;
+      }
+      .product_details_content {
+        width: 55%;
+        padding-left: 84px;
+        .product_primary_links {
+          color: $primary-dark-color;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        .product_black_links {
+          color: $main-black;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        .product_details_title {
+          font-size: 40px;
+          padding-bottom: 30px;
+          position: relative;
+
+          &::first-letter {
+            text-transform: capitalize;
+          }
+
+          &.best_selling_product {
+            padding-right: 40px;
+          }
+
+          .bestSellingLabel {
+            position: absolute;
+            max-width: 36px;
+            top: 10px;
+            right: 0;
+          }
+        }
+        .product_price {
+          .product_price_label {
+            font-size: 34px;
+          }
+        }
+        .product_socialMedia {
+          width: 35px;
+          height: 35px;
+          background-color: $primary-dark-color;
+          border-radius: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          padding: 8px;
+          transition: all 400ms ease-in-out;
+
+          &:hover {
+            background-color: $secondary-color;
+          }
+        }
+        .product_title_line {
+          border-color: $main-product-btn-color1;
+          margin: 30px 0;
+        }
+        .product_btn {
+          min-width: 210px;
+          padding: 14px 40px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: normal;
+        }
+        .productCountBtn {
+          display: flex;
+          border: 2px solid $main-black;
+          border-radius: 50rem;
+          .productCountNumber {
+            border-width: 0px 2px;
+            border-color: $main-black;
+            border-style: solid;
+            padding: 11px 14px;
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .productCount {
+            padding: 11px 14px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1699.98px) {
+  .global_header_spacing {
+    padding-top: 184px;
+  }
+}
+@media (max-width: 1599.98px) {
+  .banner_main {
+    .banner_wrapper {
+      .banner_breadcrum {
+        padding-bottom: 50px;
+      }
+      .product_details {
+        .product_details_content {
+          padding-left: 50px;
+          .product_price {
+            svg {
+              max-width: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1499.98px) {
+  .global_header_spacing {
+    padding-top: 182px;
+  }
+  .banner_main {
+    padding-top: 30px;
+    .banner_wrapper {
+      .banner_breadcrum {
+        padding-bottom: 50px;
+      }
+      .product_details {
+        .product_details_content {
+          padding-left: 30px;
+          .productCertificate {
+            // width: 100%;
+          }
+          .product_price {
+            svg {
+              max-width: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1399.98px) {
+  .banner_main {
+    padding-top: 30px;
+    .banner_wrapper {
+      .banner_breadcrum {
+        padding-bottom: 50px;
+      }
+      .product_details {
+        .product_details_content {
+          padding-left: 30px;
+          .product_price {
+            svg {
+              max-width: 14px;
+            }
+          }
+          .product_details_title {
+            font-size: 30px;
+            padding-bottom: 20px;
+          }
+          .product_title_line {
+            margin: 20px 0;
+          }
+          .kosher_certi,
+          .nutrition_certi {
+            img {
+              max-width: 14px;
+            }
+          }
+          .product_ratings {
+            .product_ratings_stars {
+              svg {
+                max-width: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .global_header_spacing {
+    padding-top: 174px;
+  }
+  .banner_main {
+    .banner_wrapper {
+      .banner_breadcrum {
+        padding-bottom: 50px;
+      }
+      .product_details {
+        .product_details_content {
+          padding-left: 20px;
+          .product_details_title {
+            font-size: 25px;
+          }
+          .product_btn {
+            min-width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .banner_main {
+    .banner_wrapper {
+      .banner_breadcrum {
+        padding-bottom: 30px;
+      }
+      .product_details {
+        gap: 30px;
+        .product_details_image {
+          width: 70%;
+          margin: auto;
+        }
+        .product_details_content {
+          padding-left: 0;
+          width: 100%;
+          .product_details_title {
+            font-size: 25px;
+          }
+          .product_btn {
+            min-width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .global_header_spacing {
+    padding-top: 96px;
+  }
+  .banner_main {
+    .banner_wrapper {
+      .banner_breadcrum {
+        padding-bottom: 25px;
+      }
+      .product_details {
+        .product_details_image {
+          width: 100%;
+        }
+        .product_details_content {
+          .product_price {
+            svg {
+              max-width: 12px;
+            }
+          }
+          .product_title_line {
+            margin: 15px 0;
+          }
+          .product_primary_links {
+            font-size: 16px !important;
+          }
+          .product_btn {
+            font-size: 15px;
+          }
+          .productCountBtn {
+            .productCountNumber {
+              padding: 10px 14px;
+              font-size: 18px;
+            }
+            .productCount {
+              padding: 10px 14px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .global_header_spacing {
+    padding-top: 87px;
+  }
+  .banner_main {
+    .banner_wrapper {
+      .product_details {
+        .product_details_content {
+          .product_details_title {
+            font-size: 22px;
+          }
+          .product_primary_links {
+            font-size: 14px !important;
+          }
+          .product_btn {
+            padding: 13px 33px;
+          }
+        }
+      }
+    }
+  }
+}

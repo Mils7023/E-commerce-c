@@ -1,0 +1,74 @@
+@import "../../../styles/colors.scss";
+
+.authHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabList {
+  display: flex;
+  gap: 100px;
+}
+
+.verification {
+  font-size: 32px;
+  font-weight: 600;
+  background: none;
+  text-transform: uppercase;
+  border: none;
+}
+
+.tabButton {
+  font-size: 32px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  color: $secondary-color;
+  opacity: 0.5;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    height: 3px;
+    width: 0;
+    border-radius: 10px;
+    background-color: $secondary-color;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+  }
+  &.active {
+    opacity: 1;
+    &::after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+.closeButton {
+  font-weight: 400;
+  border: 1.5px solid $main-black;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1699.98px) {
+  .tabButton {
+    font-size: 28px;
+    &::after {
+      bottom: -17px;
+    }
+  }
+  .tabList {
+    gap: 70px;
+  }
+}

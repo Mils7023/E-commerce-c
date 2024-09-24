@@ -1,0 +1,313 @@
+@import "../../../styles/colors.scss";
+
+/* ==========================================================
+                    HEADER SECTION SOC
+  ========================================================= */
+
+// MOBILE HEADER
+
+.mobile_header {
+  background-color: $main-white;
+  background-image: url("#{$media_path}/header-paint-img.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 25px 0 10px;
+  z-index: 99;
+  transition: all 500ms ease-in-out;
+  box-shadow: 0px 0px 10px 1px $main-black-shade1;
+
+  .header_logo {
+    max-width: 130px;
+  }
+
+  .searchBarMain {
+    transition: all 500ms ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $main-white;
+    z-index: 9;
+    height: 0;
+    transform: translateY(-40px);
+    padding: 20px 20px 40px 20px;
+    bottom: 0;
+    opacity: 0;
+    overflow: auto;
+    visibility: hidden;
+
+    &.showSearchBarMain {
+      transform: translateY(0%);
+      opacity: 1;
+      height: 100vh;
+      visibility: visible;
+      transition: all 500ms ease-in-out;
+    }
+
+    .header_search {
+      .header_search_wrapper {
+        width: calc(100% - 35px);
+        input {
+          background: $third-color;
+          border-radius: 30px;
+          padding: 12px 65px 12px 20px;
+          font-size: 15px;
+          font-weight: 400;
+          font-family: "Inter";
+          color: $main-black;
+          border: 1px solid transparent;
+
+          &::placeholder {
+            font-size: 15px;
+            color: $main-black-shade7;
+            font-weight: 400;
+            font-family: "Inter";
+          }
+
+          &:focus {
+            border-color: $primary-color;
+          }
+        }
+        .search_btn {
+          border-radius: 40px;
+          padding: 5px;
+          min-width: 50px;
+
+          img {
+            max-width: 17px;
+          }
+        }
+      }
+      .closeButton {
+        font-weight: 400;
+        border: 1.5px solid $main-black;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        cursor: pointer;
+      }
+    }
+
+    // SEARCH BAR DESIGN STARTS HERE
+    .searchBar {
+      padding: 20px 0 0;
+
+      .recentSearch {
+        .recentSearch_products_row {
+          .recentSearch_products_col {
+            .recentSearch_product_img {
+              width: 100px;
+              border: 1px solid $grey-color;
+            }
+            .recentSearch_product_content {
+              width: calc(100% - 100px);
+              padding-left: 10px;
+
+              // p {
+              //   line-height: 130% !important;
+              // }
+
+              .recentSearch_product_price {
+                svg {
+                  max-width: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile_header_left,
+  .mobile_header_right {
+    gap: 16px;
+  }
+  .burgerMenu {
+    width: 20px;
+    height: 20px;
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .burgerIcon {
+      transition-duration: 0.5s;
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: $main-black;
+
+      &:before {
+        transition-duration: 0.5s;
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        background-color: $main-black;
+        content: "";
+        top: -8px;
+        left: 0;
+      }
+      &:after {
+        content: "";
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        top: 8px;
+        left: 0;
+        background-color: $main-black;
+      }
+    }
+
+    &.burgerMenuOpen {
+      .burgerIcon {
+        transition-duration: 0.5s;
+        background: transparent;
+
+        &:before {
+          transform: rotate(45deg) scaleX(1) translate(6px, 7px);
+        }
+        &:after {
+          transform: rotate(-45deg) scaleX(1) translate(4px, -5px);
+        }
+      }
+    }
+  }
+
+  .mobileMenu {
+    background-color: $main-white;
+    height: 0;
+    transition: all 400ms ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 96px;
+    // border-top: 3px solid transparent;
+
+    &.showMobileMenu {
+      height: 100%;
+      transition: 0.5s ease-in-out;
+      // border-color: $primary-color;
+    }
+  }
+
+  .headerMenuPrimary {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease-in-out;
+    &.hidePrimaryMenu {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .headerMenuSecondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+
+    &.showSecondaryMenu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .headerMenuThird {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+
+    &.showThirdMenu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // PRIMARY HEADER MENU
+  .headerMenu {
+    // height: calc(100vh - 89px);
+    // overflow: auto;
+    .mobilemenu_back {
+      font-size: 18px;
+      .back_arrow {
+        transform: rotate(90deg);
+        color: red;
+        filter: invert(84%) sepia(19%) saturate(2684%) hue-rotate(288deg)
+          brightness(97%) contrast(93%);
+      }
+    }
+    .headerMenu_item {
+      padding: 15px 15px;
+      .headerMenu_link {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        color: $main-black;
+        cursor: default;
+      }
+      .headerMenu_link_active {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        color: $main-black;
+        img {
+          filter: invert(100%);
+        }
+      }
+      .mobile_menu_dropdown {
+        transform: rotate(-90deg);
+        cursor: pointer;
+      }
+      img {
+        filter: invert(100%);
+      }
+    }
+  }
+
+  .mobilemenu_back {
+    cursor: pointer;
+  }
+
+  @media (max-width: 575px) {
+    .mobile_header {
+      .header_logo {
+        max-width: 120px;
+      }
+    }
+
+    .mobile_header {
+      padding: 20px 0 15px;
+    }
+    .mobileMenu {
+      top: 89px;
+      &.showMobileMenu {
+        height: calc(100vh - 89px);
+        overflow: auto;
+        padding-bottom: 30px;
+      }
+    }
+    .mobile_header_left,
+    .mobile_header_right {
+      gap: 10px;
+    }
+  }
+}

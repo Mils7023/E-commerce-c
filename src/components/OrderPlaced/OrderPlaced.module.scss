@@ -1,0 +1,71 @@
+@import "../../styles/colors.scss";
+
+.global_header_spacing {
+  padding-top: 278px;
+}
+
+.order_confirm_container {
+  padding: 50px 125px 119px;
+  box-shadow: 0px 4px 44.3px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+@media (max-width: 1700px) {
+  .global_header_spacing {
+    padding-top: 184px;
+  }
+}
+@media (max-width: 1499.98px) {
+  .global_header_spacing {
+    padding-top: 182px;
+  }
+
+  .order_confirm_container {
+    padding: 50px 105px 110px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .global_header_spacing {
+    padding-top: 174px;
+  }
+
+  .order_confirm_container {
+    padding: 45px 90px 80px;
+
+    .order_confirm_image_src {
+      max-width: 290px;
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .order_confirm_container {
+    padding: 45px 90px 80px;
+
+    .order_confirm_image_src {
+      max-width: 240px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .global_header_spacing {
+    padding-top: 96px;
+  }
+
+  .order_confirm_container {
+    padding: 40px 50px 70px;
+  }
+}
+@media (max-width: 575px) {
+  .global_header_spacing {
+    padding-top: 87px;
+  }
+
+  .order_confirm_container {
+    padding: 30px 20px 50px;
+
+    .order_confirm_image_src {
+      max-width: 150px;
+    }
+  }
+}

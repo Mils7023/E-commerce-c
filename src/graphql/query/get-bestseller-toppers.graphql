@@ -1,0 +1,36 @@
+query getBestsellerToppers($pageSize: Int, $currentPage: Int) {
+  getBestsellerToppers(pageSize: $pageSize, currentPage: $currentPage) {
+    items {
+      id
+      name
+      sku
+      price_range {
+        maximum_price {
+          final_price {
+            currency
+            value
+          }
+        }
+        minimum_price {
+          final_price {
+            currency
+            value
+          }
+        }
+      }
+      review_count
+      rating_summary
+      url_key
+      small_image {
+        url
+        label
+      }
+    }
+    total_count
+    page_info {
+      total_pages
+      current_page
+      page_size
+    }
+  }
+}

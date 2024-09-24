@@ -1,0 +1,31 @@
+@import "../../../styles/colors.scss";
+.details_main {
+  .details_points {
+    .details_points_title {
+      line-height: 130% !important;
+    }
+    p {
+      line-height: 30px !important;
+    }
+  }
+}
+
+@media (max-width: 1499.98px) {
+  .details_main {
+    .details_points {
+      p {
+        line-height: 26px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .details_main {
+    .details_points {
+      p {
+        line-height: 24px !important;
+      }
+    }
+  }
+}

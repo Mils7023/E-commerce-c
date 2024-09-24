@@ -1,0 +1,101 @@
+@import "../../../styles/colors.scss";
+
+.occasion_products_card {
+  border-radius: 24px;
+  height: 458px;
+  overflow: hidden;
+
+  img {
+    transition: all 500ms ease-in-out;
+  }
+
+  &.occasion_products_lg_card {
+    height: 560px;
+  }
+  &.occasion_products_sm_card {
+    height: 269px;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (max-width: 1599.98px) {
+  .occasion_products_card {
+    height: 400px;
+    width: 100%;
+    &.occasion_products_lg_card {
+      height: 500px;
+    }
+    &.occasion_products_sm_card {
+      height: 238px;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .occasion_products_card {
+    height: 300px;
+    width: 100%;
+    &.occasion_products_lg_card {
+      height: 420px;
+    }
+    &.occasion_products_sm_card {
+      height: 198px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .occasion_products_card {
+    height: 380px;
+    width: 100%;
+    img {
+      object-fit: cover;
+    }
+    &.occasion_products_lg_card {
+      height: 380px;
+    }
+    &.occasion_products_sm_card {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .occasion_products_card {
+    height: 330px;
+    width: 100%;
+    img {
+      object-fit: cover;
+    }
+    &.occasion_products_lg_card {
+      height: 330px;
+    }
+    &.occasion_products_sm_card {
+      height: 150px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .occasion_products_card {
+    height: 180px;
+    border-radius: 8px;
+    width: 100%;
+    h3 {
+      font-size: 16px !important;
+    }
+    img {
+      object-fit: cover;
+    }
+    &.occasion_products_lg_card {
+      height: 180px;
+    }
+    &.occasion_products_sm_card {
+      height: 180px;
+    }
+  }
+}

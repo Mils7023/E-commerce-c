@@ -1,0 +1,229 @@
+@import "../../../styles/colors.scss";
+
+.global_header_spacing {
+  padding-top: 278px;
+}
+
+.checkoutform_wrapper {
+  .checkout_card {
+    box-shadow: 0px 4px 51.1px 0px $main-black-shade1;
+    border-radius: 12px;
+
+    &.checkout_form {
+      padding: 52px;
+      .checkout_identification {
+        .identification_btn {
+          // padding: 14px 20px;
+        }
+      }
+      .checkout_shipping {
+        .shipping_checked_contenticon {
+          margin-top: -5px;
+        }
+        .checkout_selectAddress_row {
+          .checkout_selectAddress_col {
+            background-color: $third-color;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            .checkout_selectAddress_icon {
+              right: 20px;
+              top: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    &.checkout_orders {
+      padding: 45px 30px;
+      .checkout_orders_row {
+        max-height: 400px;
+        overflow: auto;
+        .checkout_order_col {
+          .checkout_order_image {
+            width: 110px;
+            box-shadow: 0px 1.15px 5.29px 0px $main-black-shade2;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid $third-color;
+          }
+          .checkout_order_content {
+            width: calc(100% - 110px);
+            padding: 10px 0px 10px 20px;
+          }
+        }
+      }
+      .discountBtn {
+        min-width: 100px;
+        height: 58px;
+      }
+    }
+  }
+
+  .form_divider {
+    width: 100%;
+    height: 1px;
+    background-color: $grey-color;
+    margin: 24px 0;
+  }
+}
+
+@media (max-width: 1700px) {
+  .global_header_spacing {
+    padding-top: 184px;
+  }
+}
+@media (max-width: 1499.98px) {
+  .global_header_spacing {
+    padding-top: 182px;
+  }
+  .checkoutform_wrapper {
+    .checkout_card {
+      &.checkout_orders {
+        .checkout_orders_row {
+          .checkout_order_col {
+            .checkout_order_image {
+              width: 100px;
+            }
+            .checkout_order_content {
+              width: calc(100% - 100px);
+              padding: 10px 0px 10px 15px;
+            }
+          }
+        }
+        .discountBtn {
+          min-width: 100px;
+          height: 54px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .global_header_spacing {
+    padding-top: 174px;
+  }
+  .checkoutform_wrapper {
+    .checkout_card {
+      &.checkout_form {
+        padding: 30px 20px;
+      }
+      &.checkout_orders {
+        padding: 30px 20px;
+        .checkout_orders_row {
+          .checkout_order_col {
+            .checkout_order_image {
+              width: 90px;
+            }
+            .checkout_order_content {
+              width: calc(100% - 90px);
+              padding: 0px 0px 0px 15px;
+            }
+          }
+        }
+      }
+      .pricing_sign_md,
+      .pricing_sign_lg {
+        max-width: 13px;
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .checkoutform_wrapper {
+    .checkout_card {
+      &.checkout_orders {
+        .discountBtn {
+          height: 51px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .global_header_spacing {
+    padding-top: 96px;
+  }
+  .checkoutform_wrapper {
+    .checkout_card {
+      &.checkout_form {
+        padding: 25px 20px;
+        .checkout_identification {
+          .identification_btn {
+            padding: 9px 20px;
+            font-size: 15px;
+          }
+        }
+
+        .checkout_shipping {
+          .checkout_selectAddress_row {
+            .checkout_selectAddress_col {
+              background-color: $third-color;
+              padding: 15px;
+              .checkout_selectAddress_icon {
+                right: 15px;
+                top: 15px;
+              }
+            }
+          }
+          .editAddress_btn {
+            padding: 9px 20px;
+            font-size: 15px;
+          }
+          .checkout_shipping_title {
+            button {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      &.checkout_orders {
+        padding: 25px 20px;
+        .checkout_orders_row {
+          .checkout_order_col {
+            .checkout_order_image {
+              width: 90px;
+            }
+            .checkout_order_content {
+              width: calc(100% - 90px);
+              padding: 0px 0px 0px 15px;
+            }
+          }
+        }
+        .discountBtn {
+          height: 45px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .global_header_spacing {
+    padding-top: 87px;
+  }
+
+  .checkoutform_wrapper {
+    .checkout_card {
+      &.checkout_form {
+        padding: 20px 15px;
+      }
+      &.checkout_orders {
+        padding: 20px 15px;
+        .checkout_orders_row {
+          max-height: 280px;
+          .checkout_order_col {
+            .checkout_order_image {
+              width: 75px;
+            }
+            .checkout_order_content {
+              width: calc(100% - 75px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+@import "../../../styles/colors.scss";
+
+/* ==========================================================
+                    FOOTER SECTION SOC
+========================================================== */
+.footer_main {
+  .footer_head {
+    padding-bottom: 65px;
+  }
+  .join_us {
+    .form_control {
+      background-color: $third-color;
+      border: 1px solid transparent;
+      padding: 17px 20px;
+      border-radius: 12px;
+      font-size: 20px;
+      color: $main-black;
+
+      &::placeholder {
+        color: $main-black-shade5;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+        background-color: transparent;
+      }
+    }
+    .joinus_btn {
+      background-color: $secondary-color;
+      border: none;
+      padding: 10px 70px;
+      color: $main-white;
+      font-size: 20px;
+      border-radius: 12px;
+      transition: all 400ms ease-in-out;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+      &:focus {
+        background-color: $primary-color;
+      }
+    }
+  }
+  .we_offer {
+    .payment_method_wrapper {
+      img {
+        max-height: 50px;
+      }
+    }
+  }
+  .footer_body {
+    .footer_links_title {
+      padding-bottom: 34px;
+      display: inline-block;
+    }
+    .footer_links {
+      li {
+        a {
+          font-size: 20px;
+          color: $main-black;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    .menu_divider {
+      width: 2px;
+      background-color: $primary-color;
+    }
+  }
+  .footer_end {
+    padding-top: 110px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .footer_main {
+    .footer_body {
+      .footer_logo {
+        max-width: 170px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .footer_main {
+    .join_us {
+      .form_control {
+        font-size: 16px;
+
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+      .joinus_btn {
+        padding: 10px 70px;
+        font-size: 16px;
+      }
+    }
+    .footer_body {
+      .footer_links_title {
+        padding-bottom: 34px;
+        display: inline-block;
+      }
+      .footer_links {
+        li {
+          a {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+    .footer_end {
+      padding-top: 80px;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .footer_main {
+    .join_us {
+      .joinus_btn {
+        padding: 10px 40px;
+      }
+    }
+    .footer_body {
+      .footer_logo {
+        max-width: 150px;
+      }
+      .footer_links {
+        li {
+          a {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .footer_end {
+      padding-top: 65px;
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .footer_main {
+    .join_us {
+      .form_control {
+        font-size: 14px;
+        padding: 15px;
+
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+      .joinus_btn {
+        padding: 10px 40px;
+        font-size: 14px;
+      }
+    }
+    .footer_body {
+      .footer_logo {
+        max-width: 150px;
+      }
+      .footer_links {
+        li {
+          a {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .footer_end {
+      padding-top: 65px;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .footer_main {
+    .join_us {
+      .form_control {
+        padding: 12px 15px;
+        border-radius: 6px;
+      }
+      .joinus_btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 6px;
+      }
+    }
+    .footer_head {
+      padding-bottom: 0px;
+      padding-top: 40px;
+    }
+    .footer_body {
+      .footer_links_title {
+        padding-bottom: 14px;
+      }
+      .footer_logo {
+        max-width: 150px;
+      }
+      .footer_links {
+        li {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .footer_end {
+      padding-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import "../../../styles/colors.scss";
+
+.formGroup {
+  .formLabel {
+    color: $main-black;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    padding-bottom: 18px;
+    display: inline-block;
+  }
+
+  .formSelect {
+    padding: 17px 33px 17px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: $main-black-shade3;
+    border: 2px solid $form-border;
+    font-weight: 500;
+    width: 100%;
+    background-color: transparent;
+    appearance: none;
+    background-image: url("#{$media_path}/select-arrow.png");
+    background-position: right 13px center;
+    background-repeat: no-repeat;
+    background-size: 13px;
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      background-color: $main-white;
+      color: $main-black;
+    }
+    &.formSelect2 {
+      border-width: 1px;
+      border-radius: 8px;
+      color: $main-black;
+
+      &:focus {
+        color: $main-black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1499.98px) {
+  .formGroup {
+    .formLabel {
+      font-size: 17px;
+      padding-bottom: 14px;
+    }
+
+    .formSelect {
+      padding: 15px 20px;
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .formGroup {
+    .formSelect {
+      padding: 15px 20px;
+      font-size: 15px;
+      border-width: 1px;
+
+      &.formSelect2 {
+        border-width: 1px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .formGroup {
+    .formLabel {
+      font-size: 15px;
+      padding-bottom: 12px;
+    }
+    .formSelect {
+      padding: 13px 31px 13px 18px;
+      font-size: 14px;
+      border-width: 1px;
+      border-radius: 8px;
+      background-position: right 11px center;
+      background-size: 11px;
+    }
+  }
+}

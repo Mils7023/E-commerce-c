@@ -1,0 +1,174 @@
+@import "../../../styles/colors.scss";
+
+.filter_btn {
+  border: 1px solid $grey-color;
+  border-radius: 10px;
+  padding: 14px 40px;
+  font-size: 20px;
+
+  color: $main-black;
+}
+
+.pf_row {
+  padding-top: 40px;
+}
+
+// DESIGN FOR THE FILTER SIDEBAR
+.filter_box {
+  background-color: $third-color;
+  border-radius: 10px;
+  padding: 20px;
+
+  .filter_col {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .filter_title {
+      padding-bottom: 20px;
+    }
+    .clear_filter {
+      font-size: 18px;
+      color: $main-black;
+      font-weight: 400;
+      text-decoration: underline;
+      outline: none;
+      border: none;
+    }
+  }
+
+  hr {
+    border-color: $main-black-shade5;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .filter_btn {
+    font-size: 18px;
+    padding: 13px 30px;
+  }
+
+  // DESIGN FOR THE FILTER SIDEBAR
+  .filter_box {
+    .filter_col {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .clear_filter {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .noSearchWrapper {
+    .noSearchImage {
+      max-width: 275px;
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .pf_row {
+    padding-top: 30px;
+  }
+  .filter_btn {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+
+  // DESIGN FOR THE FILTER SIDEBAR
+  .filter_box {
+    padding: 20px 15px;
+    .filter_col {
+      margin-bottom: 25px;
+    }
+  }
+
+  .noSearchWrapper {
+    .noSearchImage {
+      max-width: 250px;
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .pf_row {
+    padding-top: 30px;
+  }
+
+  // DESIGN FOR THE FILTER SIDEBAR
+  .filter_box {
+    .filter_col {
+      margin-bottom: 20px;
+      .filter_title {
+        padding-bottom: 15px;
+      }
+
+      .clear_filter {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .noSearchWrapper {
+    .noSearchImage {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .filter_btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .filterDrawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: auto;
+    width: 100%;
+    box-shadow: 0px 0px 10px 1px $main-black-shade5;
+    background-color: $main-black-shade4;
+    transition: all 400ms ease-in-out;
+
+    .closeButton {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+    }
+
+    &.hideFilter {
+      // display: none;
+      opacity: 0;
+      visibility: hidden;
+      .filter_box {
+        transform: translateX(-100%);
+      }
+    }
+    &.showFilter {
+      opacity: 1;
+      z-index: 99;
+      visibility: visible;
+    }
+    .filter_box {
+      background-color: $main-white;
+      padding: 30px;
+      max-width: 300px;
+      border-radius: 0;
+      min-height: 100vh;
+      transition: all 400ms ease-in-out;
+      transform: 0;
+    }
+  }
+
+  .noSearchWrapper {
+    .noSearchImage {
+      max-width: 175px;
+    }
+  }
+}

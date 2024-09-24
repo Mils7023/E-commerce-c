@@ -1,0 +1,21 @@
+mutation UploadFiles(
+  $name: String!
+  $base64_encoded_file: String!
+  $originalPath: String!
+) {
+  uploadFiles(
+    input: {
+      name: $name
+      base64_encoded_file: $base64_encoded_file
+      originalPath: $originalPath
+    }
+  ) {
+    items {
+      name
+      fullname
+      file_path
+      full_path
+      secret_key
+    }
+  }
+}

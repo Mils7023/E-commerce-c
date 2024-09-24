@@ -1,0 +1,5 @@
+mutation AddContactUsDetails($input: ContactUsFormInput) {
+  addContactUsDetails(input: $input) {
+    success_message
+  }
+}

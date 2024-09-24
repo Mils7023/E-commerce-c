@@ -1,0 +1,92 @@
+@import "../../../styles/colors.scss";
+
+.our_journey_section {
+  background-color: $third-shade2;
+  padding: 80px 0;
+  .our_journey_tab_content {
+    margin: 65px 130px 0;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    overflow: hidden;
+    .our_journey_src {
+      width: 100%;
+    }
+    .our_journey_card_content {
+      padding: 20px 60px;
+      .our_journey_card_content_title {
+        padding-bottom: 38px;
+      }
+      .our_journey_card_content_text {
+        color: $main-white-shade5;
+      }
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+}
+
+@media (max-width: 1499.98px) {
+  .our_journey_section {
+    padding: 60px 0;
+    .our_journey_tab_content {
+      margin: 50px 110px 0;
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .our_journey_section {
+    .our_journey_tab_content {
+      margin: 30px 90px 0;
+      .our_journey_card_content {
+        padding: 20px 30px;
+        .our_journey_card_content_title {
+          padding-bottom: 18px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .our_journey_section {
+    padding: 50px 0;
+    .our_journey_tab_content {
+      margin: 28px 40px 0;
+      .our_journey_card_content {
+        .our_journey_card_content_title {
+          padding-bottom: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .our_journey_section {
+    .our_journey_tab_content {
+      margin: 28px 90px 0;
+      .our_journey_src {
+        width: 100%;
+        max-height: max-content;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .our_journey_card_content {
+        padding: 45px 30px;
+        .our_journey_card_content_title {
+          padding-bottom: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .our_journey_section {
+    padding: 40px 0;
+    .our_journey_tab_content {
+      margin: 28px 0px 0;
+    }
+  }
+}

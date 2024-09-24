@@ -1,0 +1,221 @@
+query getProducts($url_key: String) {
+  products(filter: { url_key: { eq: $url_key } }) {
+    __typename
+    items {
+      id
+      uid
+      name
+      sku
+      url_key
+      meta_description
+      meta_keyword
+      meta_title
+      stock_status
+      faqs {
+        title
+        description
+      }
+      categories {
+        breadcrumbs {
+          category_level
+          category_name
+          category_url_path
+          category_uid
+        }
+        name
+      }
+      small_image {
+        url
+      }
+      thumbnail {
+        url
+        label
+      }
+      technical_information {
+        title
+        description
+      }
+      price_range {
+        maximum_price {
+          discount {
+            amount_off
+          }
+          final_price {
+            currency
+            value
+          }
+          regular_price {
+            currency
+            value
+          }
+        }
+        minimum_price {
+          discount {
+            amount_off
+            percent_off
+          }
+          final_price {
+            currency
+            value
+          }
+          regular_price {
+            currency
+            value
+          }
+        }
+      }
+      media_gallery_entries {
+        uid
+        label
+        position
+        disabled
+        file
+        types
+        media_type
+        video_content {
+          video_url
+          video_title
+        }
+      }
+      special_price
+      description {
+        html
+      }
+      review_count
+      rating_summary
+      reviews {
+        items {
+          average_rating
+          summary
+          text
+          created_at
+          nickname
+        }
+      }
+      related_products {
+        uid
+        name
+        sku
+        url_key
+        meta_description
+        meta_keyword
+        meta_title
+        color
+        stock_status
+        rating_summary
+        categories {
+          name
+        }
+        small_image {
+          url
+          label
+        }
+        thumbnail {
+          url
+          label
+        }
+        price_range {
+          maximum_price {
+            discount {
+              amount_off
+            }
+            final_price {
+              currency
+              value
+            }
+          }
+          minimum_price {
+            discount {
+              amount_off
+            }
+            final_price {
+              currency
+              value
+            }
+          }
+        }
+      }
+
+      ... on ConfigurableProduct {
+        configurable_options {
+          id
+          uid
+          attribute_id
+          label
+          position
+          use_default
+          attribute_code
+          values {
+            value_index
+            uid
+            label
+            swatch_data {
+              value
+            }
+          }
+          product_id
+        }
+        variants {
+          product {
+            id
+            name
+            sku
+            attribute_set_id
+            ... on PhysicalProductInterface {
+              weight
+            }
+            price_range {
+              maximum_price {
+                discount {
+                  amount_off
+                }
+                final_price {
+                  currency
+                  value
+                }
+              }
+              minimum_price {
+                discount {
+                  amount_off
+                }
+                final_price {
+                  currency
+                  value
+                }
+              }
+            }
+            media_gallery_entries {
+              uid
+              label
+              position
+              disabled
+              file
+              types
+              media_type
+              video_content {
+                video_url
+                video_title
+              }
+            }
+            rating_summary
+            reviews {
+              items {
+                average_rating
+                summary
+                text
+                created_at
+                nickname
+              }
+            }
+          }
+          attributes {
+            uid
+            label
+            code
+            value_index
+          }
+        }
+      }
+    }
+  }
+}

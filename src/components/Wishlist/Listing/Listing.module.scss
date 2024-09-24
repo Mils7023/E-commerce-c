@@ -1,0 +1,24 @@
+@import "../../../styles/colors.scss";
+
+@media (max-width: 1199.98px) {
+  .emptyWishlistWrapper {
+    .emptyWishlistImage {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .emptyWishlistWrapper {
+    .emptyWishlistImage {
+      max-width: 180px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .emptyWishlistWrapper {
+    .emptyWishlistImage {
+      max-width: 140px;
+    }
+  }
+}

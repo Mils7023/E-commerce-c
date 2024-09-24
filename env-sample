@@ -1,0 +1,5 @@
+GRAPHQL_URL="http://cennolliocake.wedowebapps.in/graphql"
+DOMAIN_URL="cennolliocake.wedowebapps.in"
+MEDIA_URL="http://cennolliocake.wedowebapps.in/"
+PAYPAL_RETURN_URL="paypal/express/success"
+PAYPAL_CANCEL_URL="checkout"

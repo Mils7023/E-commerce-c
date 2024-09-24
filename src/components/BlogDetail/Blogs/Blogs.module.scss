@@ -1,0 +1,85 @@
+@import "../../../styles/colors.scss";
+
+.blog_col {
+  overflow: hidden;
+
+  &:hover {
+    .blog_content {
+      .blog_link:after {
+        width: 80%;
+        opacity: 1;
+
+        svg {
+          fill: $secondary-color;
+        }
+      }
+    }
+  }
+  .blog_image {
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      min-height: 275px;
+      max-height: 275px;
+    }
+  }
+  .blog_content {
+    padding: 30px 0 0;
+
+    .blog_label {
+      background-color: $primary-color;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .blog_link {
+      margin-bottom: 2px;
+      &:after {
+        content: "";
+        border-bottom: 2px solid $primary-color;
+        width: 0;
+        transition: all 400ms ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .blog_col {
+    .blog_image {
+      img {
+        min-height: 270px;
+        max-height: 270px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .blog_col {
+    .blog_image {
+      img {
+        min-height: 230px;
+        max-height: 230px;
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .blog_col {
+    .blog_content {
+      padding: 20px 0 0;
+    }
+    .blog_image {
+      img {
+        min-height: 200px;
+        max-height: 200px;
+      }
+    }
+  }
+}

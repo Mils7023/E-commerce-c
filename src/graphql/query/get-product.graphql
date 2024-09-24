@@ -1,0 +1,84 @@
+query getProductsListByFilters(
+  $pageSize: Int!
+  $currentPage: Int!
+  $sort: ProductAttributeSortInput
+  $filters: ProductAttributeFilterInput
+  $categoryIdFilter: FilterEqualTypeInput!
+) {
+  categories(filters: { category_uid: $categoryIdFilter }) {
+    items {
+      id
+      uid
+    }
+  }
+  products(
+    currentPage: $currentPage
+    sort: $sort
+    filter: $filters
+    pageSize: $pageSize
+  ) {
+    items {
+      uid
+      name
+      sku
+      url_key
+      meta_description
+      meta_keyword
+      meta_title
+      color
+      stock_status
+      materials
+      rating_summary
+      categories {
+        name
+        uid
+      }
+      small_image {
+        url
+      }
+      thumbnail {
+        url
+        label
+      }
+      price_range {
+        maximum_price {
+          discount {
+            amount_off
+          }
+          final_price {
+            currency
+            value
+          }
+        }
+        minimum_price {
+          discount {
+            amount_off
+          }
+          final_price {
+            currency
+            value
+          }
+        }
+      }
+      media_gallery_entries {
+        uid
+        label
+        position
+        disabled
+        file
+        media_type
+        video_content {
+          video_url
+          video_title
+        }
+      }
+    }
+    total_count
+    page_info {
+      __typename
+      current_page
+      page_size
+      total_pages
+    }
+  }
+}

@@ -1,0 +1,180 @@
+@import "../../../styles/colors.scss";
+
+/* label container */
+.formControl {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.primaryTheme_formcontrol {
+    .title {
+      font-size: 16px;
+      gap: 10px;
+
+      &::after {
+        background: $primary-color;
+        border-radius: 5px;
+      }
+      &::before {
+        border-color: $primary-color;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &.checkoutFormControl {
+    .sideLable {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+    .radio:checked ~ .title {
+      background-color: $grey-color;
+      border-color: $grey-color;
+      color: $main-black;
+
+      &:before {
+        border-color: $primary-dark-color;
+      }
+    }
+    .title {
+      background-color: $main-white;
+      padding: 17px 20px;
+      border-radius: 8px;
+      border: 2px solid $form-border;
+      color: $main-black-shade5;
+      &::after {
+        left: 24px;
+        background: $primary-dark-color;
+      }
+      &::before {
+        border-color: $main-black-shade5;
+        border-width: 2px;
+      }
+    }
+  }
+
+  .radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .title {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 18px;
+    color: $main-black;
+    font-weight: 400;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 4px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: $main-black;
+    }
+
+    &::before {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 21px;
+      width: 21px;
+      min-width: 21px;
+      border-radius: 50%;
+      border: 1px solid $main-black;
+      transition: all 0.3s;
+      display: inline-block;
+      content: "";
+    }
+  }
+
+  .radio:checked ~ .title:after {
+    display: block;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .formControl {
+    margin-bottom: 10px;
+
+    .title {
+      font-size: 16px;
+
+      &::before {
+        width: 19px;
+        height: 19px;
+        min-width: 19px;
+      }
+      &::after {
+        left: 3px;
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .formControl {
+    .title {
+      font-size: 13px;
+      gap: 8px;
+
+      &::before {
+        width: 17px;
+        height: 17px;
+        min-width: 17px;
+      }
+      &::after {
+        left: 3px;
+        width: 11px;
+        height: 11px;
+      }
+    }
+
+    &.primaryTheme_formcontrol {
+      .title {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .formControl {
+    &.checkoutFormControl {
+      .sideLable {
+        right: 10px;
+        img {
+          max-height: 15px;
+          object-fit: contain;
+          object-position: right;
+        }
+      }
+      .title {
+        padding: 15px 10px;
+        &::after {
+          left: 13px;
+        }
+      }
+    }
+  }
+}

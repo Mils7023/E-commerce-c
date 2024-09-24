@@ -1,0 +1,27 @@
+.rc-slider {
+  border: black !important;
+  background-color: black !important;
+}
+
+/* Customize the track */
+.rc-slider-track {
+  background-color: black !important;
+}
+
+/* Customize the handle */
+.rc-slider-handle {
+  border: 2px solid black !important;
+  background-color: black !important;
+}
+
+/* Handle color on hover, focus, and active states */
+.rc-slider-handle:active,
+.rc-slider-handle:focus,
+.rc-slider-handle:hover {
+  border-color: black !important;
+}
+
+/* Customize the rail (the part before the slider's track) */
+.rc-slider-rail {
+  background-color: #e0e0e0 !important;
+}

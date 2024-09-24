@@ -1,0 +1,177 @@
+query getProductFiltersByCategory(
+  $pageSize: Int!
+  $currentPage: Int!
+  $sort: ProductAttributeSortInput
+  $filters: ProductAttributeFilterInput
+  $categoryIdFilter: FilterEqualTypeInput!
+) {
+  categories(filters: { category_uid: $categoryIdFilter }) {
+    items {
+      uid
+      name
+      url_key
+      url_path
+      image
+      parent_category {
+        id
+        uid
+        name
+        url_path
+        category_products(
+          currentPage: $currentPage
+          sort: $sort
+          filter: $filters
+          pageSize: $pageSize
+        ) {
+          items {
+            id
+            name
+            sku
+            price_range {
+              maximum_price {
+                final_price {
+                  currency
+                  value
+                }
+              }
+              minimum_price {
+                final_price {
+                  currency
+                  value
+                }
+              }
+            }
+            url_key
+            small_image {
+              url
+              label
+            }
+            thumbnail {
+              url
+              label
+            }
+          }
+          total_count
+          page_info {
+            __typename
+            current_page
+            page_size
+            total_pages
+          }
+        }
+      }
+      sibling_categories {
+        id
+        uid
+        name
+        url_path
+        category_products(
+          currentPage: $currentPage
+          sort: $sort
+          filter: $filters
+          pageSize: $pageSize
+        ) {
+          items {
+            id
+            name
+            sku
+            price_range {
+              maximum_price {
+                final_price {
+                  currency
+                  value
+                }
+              }
+              minimum_price {
+                final_price {
+                  currency
+                  value
+                }
+              }
+            }
+            url_key
+            small_image {
+              url
+              label
+            }
+            thumbnail {
+              url
+              label
+            }
+          }
+          total_count
+          page_info {
+            __typename
+            current_page
+            page_size
+            total_pages
+          }
+        }
+      }
+      children_count
+      children {
+        id
+        uid
+        url_key
+        name
+        url_path
+        category_products(
+          currentPage: $currentPage
+          sort: $sort
+          filter: $filters
+          pageSize: $pageSize
+        ) {
+          items {
+            id
+            name
+            sku
+            price_range {
+              maximum_price {
+                final_price {
+                  currency
+                  value
+                }
+              }
+              minimum_price {
+                final_price {
+                  currency
+                  value
+                }
+              }
+            }
+            url_key
+            small_image {
+              url
+              label
+            }
+            thumbnail {
+              url
+              label
+            }
+          }
+          total_count
+          page_info {
+            __typename
+            current_page
+            page_size
+            total_pages
+          }
+        }
+      }
+    }
+  }
+
+  products(sort: $sort, filter: { category_uid: $categoryIdFilter }) {
+    aggregations {
+      label
+      count
+      attribute_code
+      options {
+        label
+        value
+        __typename
+      }
+      position
+    }
+  }
+}

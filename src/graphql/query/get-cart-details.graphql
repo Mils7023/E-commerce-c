@@ -1,0 +1,174 @@
+query GetCartDetails($cartId: String!) {
+  cart(cart_id: $cartId) {
+    id
+    ...CartPageFragment
+    ...PriceSummaryFragment
+    __typename
+  }
+}
+
+fragment CartPageFragment on Cart {
+  id
+  total_quantity
+  applied_coupons {
+    code
+  }
+  ...ProductListingFragment
+  billing_address {
+    firstname
+    lastname
+    company
+    street
+    city
+    region {
+      code
+      label
+      region_id
+      __typename
+    }
+    postcode
+    country {
+      code
+      label
+      __typename
+    }
+    telephone
+    __typename
+  }
+  shipping_addresses {
+    firstname
+    lastname
+    company
+    street
+    city
+    region {
+      code
+      label
+      region_id
+      __typename
+    }
+    postcode
+    country {
+      code
+      label
+      __typename
+    }
+    telephone
+    __typename
+  }
+  selected_payment_method {
+    code
+  }
+  email
+}
+
+fragment ProductListingFragment on Cart {
+  id
+  items {
+    uid
+    image_url
+    personalized_text
+    product {
+      id
+      uid
+      name
+      sku
+      url_key
+      thumbnail {
+        url
+      }
+      price_tiers {
+        final_price {
+          currency
+          value
+        }
+        discount {
+          percent_off
+        }
+        quantity
+      }
+      stock_status
+      __typename
+    }
+    prices {
+      price {
+        currency
+        value
+      }
+    }
+    quantity
+    errors {
+      code
+      message
+    }
+    ... on ConfigurableCartItem {
+      configurable_options {
+        id
+        configurable_product_option_uid
+        option_label
+        configurable_product_option_value_uid
+        value_label
+      }
+    }
+  }
+}
+
+fragment PriceSummaryFragment on Cart {
+  id
+  total_quantity
+  prices {
+    ...TaxSummaryFragment
+    ...DiscountSummaryFragment
+    estimatedShipping {
+      amount {
+        currency
+        value
+        __typename
+      }
+      carrier_code
+      method_code
+      method_title
+      __typename
+    }
+    subtotal_excluding_tax {
+      currency
+      value
+    }
+    subtotal_including_tax {
+      currency
+      value
+    }
+    subtotal_with_discount_excluding_tax {
+      value
+      currency
+      __typename
+    }
+    ...GrandTotalFragment
+  }
+}
+
+fragment DiscountSummaryFragment on CartPrices {
+  discount {
+    amount {
+      currency
+      value
+    }
+    label
+  }
+}
+
+fragment GrandTotalFragment on CartPrices {
+  grand_total {
+    currency
+    value
+  }
+}
+
+fragment TaxSummaryFragment on CartPrices {
+  applied_taxes {
+    amount {
+      currency
+      value
+    }
+  }
+}

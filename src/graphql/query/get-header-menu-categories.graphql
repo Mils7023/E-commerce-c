@@ -1,0 +1,40 @@
+query GetHeaderMenuCategories {
+  getHeaderMenuCategories {
+    items {
+      id
+      name
+      uid
+      icon
+      header_image
+      menu_type
+      page_link
+      children {
+        id
+        name
+        uid
+        icon
+        menu_type
+        header_image
+        page_link
+        children {
+          id
+          name
+          uid
+          menu_type
+          icon
+          header_image
+          page_link
+          children {
+            id
+            name
+            uid
+            menu_type
+            icon
+            header_image
+            page_link
+          }
+        }
+      }
+    }
+  }
+}

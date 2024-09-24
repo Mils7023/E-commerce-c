@@ -1,0 +1,108 @@
+.comman-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  @media (min-width: 640px) {
+    gap: 12px;
+  }
+
+  @media (min-width: 768px) {
+    gap: 14px;
+  }
+
+  @media (min-width: 1280px) {
+    gap: 16px;
+  }
+
+  @media (max-width: 767px) {
+    gap: 5px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  .previous-btn,
+  .next-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px; /* Square edges */
+    border: 1px solid #000000;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+
+    @media (min-width: 640px) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (min-width: 1536px) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 991.98px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+    }
+
+    svg {
+      @media (max-width: 991.98px) {
+        max-width: 15px;
+      }
+    }
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000; /* Square border for page numbers */
+    background-color: transparent;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px; /* Square edges */
+
+    @media (min-width: 640px) {
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+    }
+
+    @media (min-width: 1536px) {
+      width: 60px;
+      height: 60px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 991.98px) {
+      width: 30px;
+      height: 30px;
+      font-size: 12px;
+    }
+
+    &.btn-active {
+      background-color: #000000; /* Background color when active */
+      color: #ffffff; /* Text color when active */
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  .text-black-600 {
+    color: #4a5568;
+  }
+}

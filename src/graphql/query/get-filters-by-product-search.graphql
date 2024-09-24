@@ -1,0 +1,16 @@
+query GetFiltersByProductSearch($search: String) {
+  products(search: $search) {
+    aggregations {
+      label
+      count
+      attribute_code
+      options {
+        label
+        value
+        __typename
+      }
+      position
+      __typename
+    }
+  }
+}

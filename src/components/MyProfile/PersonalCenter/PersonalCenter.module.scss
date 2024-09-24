@@ -1,0 +1,194 @@
+@import "../../../styles/colors.scss";
+
+.profile_title {
+  padding: 24px 43px;
+
+  .plus_vector {
+    border: 1px solid $primary-color;
+    padding: 3px;
+    border-radius: 100%;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.profile_body {
+  padding: 32px 43px;
+  .profile_image {
+    width: 130px;
+    height: 130px;
+    .profile_camera_vector {
+      position: absolute;
+      background-color: $main-product-btn-color1;
+      width: 40px;
+      height: 40px;
+      padding: 8px 6px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 8px;
+      right: -8px;
+      box-shadow: 0px 4px 9.2px 0px $main-black-shade2;
+
+      .profile_vector_src {
+        min-width: 18px;
+      }
+    }
+  }
+
+  .profile_address_book {
+    .addressbook_card {
+      .address_card {
+        background-color: $third-shade1;
+        border-radius: 10px;
+        padding: 16px;
+
+        .default_btn {
+          background-color: $grey-color;
+          color: $main-black-shade3;
+          padding: 5px 15px;
+          border-radius: 10px;
+        }
+
+        .edit_vector {
+          background-color: $primary-color;
+          border-radius: 100%;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .order_table {
+    .order_table_heading {
+      tr {
+        border-radius: 10px;
+        // display: table;
+        // width: 100%;
+        // table-layout: fixed;
+        th {
+          background-color: transparent;
+          border-bottom: 0;
+          padding: 17px 8px;
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+    }
+    .table_divider {
+      height: 16px;
+    }
+    .order_table_body {
+      // display: block;
+      // padding: 35px 12px;
+      tr {
+        border-radius: 10px;
+        // display: table;
+        // width: 100%;
+        // table-layout: fixed;
+        td {
+          background-color: transparent;
+          padding: 24px 8px;
+          text-align: center;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.change_password_modal {
+  .model_body {
+    .closeButton {
+      font-weight: 400;
+      border: 1.5px solid $main-black;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      cursor: pointer;
+    }
+    .modal_product {
+    }
+    .model_divider {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1499.98px) {
+}
+
+@media (max-width: 1399.98px) {
+}
+@media (max-width: 1199.98px) {
+  .profile_title {
+    padding: 20px 35px;
+  }
+  .profile_body {
+    padding: 30px 35px;
+
+    .order_table {
+      .table_divider {
+        height: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .profile_title {
+    padding: 15px 25px;
+  }
+  .profile_body {
+    padding: 25px;
+
+    .order_table {
+      .table_divider {
+        height: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .profile_title {
+    padding: 15px 20px;
+
+    .plus_vector {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .profile_body {
+    padding: 20px;
+
+    .profile_common_btn {
+      padding: 9px 30px;
+    }
+    .profile_address_book {
+      .addressbook_card {
+        .address_card {
+          .edit_vector {
+            width: 25px;
+            height: 25px;
+            padding: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+}

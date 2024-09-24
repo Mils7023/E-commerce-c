@@ -1,0 +1,45 @@
+query GetCustomerWishlist($currentPage: Int!, $pageSize: Int!) {
+  customer {
+    wishlist_v2(id: "0") {
+      id
+      items_count
+      items_v2(currentPage: $currentPage, pageSize: $pageSize) {
+        items {
+          id
+          description
+          product {
+            uid
+            name
+            sku
+            url_key
+            thumbnail {
+              url
+            }
+            small_image {
+              url
+            }
+            price_range {
+              minimum_price {
+                final_price {
+                  currency
+                  value
+                }
+              }
+              maximum_price {
+                final_price {
+                  currency
+                  value
+                }
+              }
+            }
+          }
+        }
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
+      }
+    }
+  }
+}

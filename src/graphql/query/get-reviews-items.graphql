@@ -1,0 +1,34 @@
+query getReviewsItems($pageSize: Int!, $currentPage: Int!) {
+  reviews(pageSize: $pageSize, currentPage: $currentPage) {
+    total_count
+    items {
+      avatar
+      likes_num
+      created_at
+      detail
+      gallery {
+        label
+        large_url
+        preview_url
+        url
+        __typename
+      }
+      rating_votes {
+        label
+        percent
+        __typename
+      }
+      nickname
+      title
+      review_detail_id
+      __typename
+    }
+    __typename
+    page_info {
+      current_page
+      page_size
+      total_pages
+      __typename
+    }
+  }
+}

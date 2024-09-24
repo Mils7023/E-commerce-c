@@ -1,0 +1,18 @@
+query getCategories(
+  $filters: CategoryFilterInput
+  $pageSize: Int
+  $currentPage: Int
+) {
+  categories(
+    filters: $filters
+    pageSize: $pageSize
+    currentPage: $currentPage
+  ) {
+    items {
+      id
+      uid
+      name
+      url_key
+    }
+  }
+}

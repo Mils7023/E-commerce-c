@@ -1,0 +1,121 @@
+query GetCartItemDetails($item_id: String!, $cart_id: String!) {
+  getCartItemDetails(item_id: $item_id, cart_id: $cart_id) {
+    uid
+    id
+    image_url
+    personalized_text
+    product {
+      id
+      uid
+      name
+      sku
+      url_key
+      thumbnail {
+        url
+      }
+      price_tiers {
+        final_price {
+          currency
+          value
+        }
+        discount {
+          percent_off
+        }
+        quantity
+      }
+      ... on ConfigurableProduct {
+        configurable_options {
+          id
+          label
+          attribute_code
+          values {
+            uid
+            label
+          }
+        }
+        variants {
+          product {
+            id
+            name
+            sku
+            attribute_set_id
+            ... on PhysicalProductInterface {
+              weight
+            }
+            price_range {
+              maximum_price {
+                discount {
+                  amount_off
+                }
+                final_price {
+                  currency
+                  value
+                }
+              }
+              minimum_price {
+                discount {
+                  amount_off
+                }
+                final_price {
+                  currency
+                  value
+                }
+              }
+            }
+            media_gallery_entries {
+              uid
+              label
+              position
+              disabled
+              file
+              media_type
+              video_content {
+                video_url
+                video_title
+              }
+            }
+            rating_summary
+            reviews {
+              items {
+                average_rating
+                summary
+                text
+                created_at
+                nickname
+              }
+            }
+          }
+          attributes {
+            uid
+            label
+            code
+            value_index
+          }
+        }
+      }
+      stock_status
+      __typename
+    }
+    prices {
+      price {
+        currency
+        value
+      }
+    }
+    quantity
+    errors {
+      code
+      message
+    }
+
+    ... on ConfigurableCartItem {
+      configurable_options {
+        id
+        configurable_product_option_uid
+        option_label
+        configurable_product_option_value_uid
+        value_label
+      }
+    }
+  }
+}

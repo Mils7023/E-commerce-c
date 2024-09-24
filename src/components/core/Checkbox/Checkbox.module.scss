@@ -1,0 +1,156 @@
+@import "../../../styles/colors.scss";
+
+.formControl {
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .labelWrapper {
+    display: inline-block;
+  }
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: $main-black;
+
+    &::before {
+      content: "";
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1px solid $main-black;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+  input:checked + label:before {
+    background-color: $main-black;
+  }
+  input:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 7px;
+    bottom: 2px;
+    margin: auto;
+    width: 6px;
+    height: 11px;
+    border: 2px solid $main-white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  // DESIGN FOR PINK COLOR CHECKBOX
+  &.primaryTheme_formcontrol {
+    label {
+      font-size: 16px;
+      gap: 10px;
+      &::before {
+        border-color: $primary-color;
+        border-radius: 5px;
+      }
+    }
+    input:checked + label:before {
+      background-color: transparent;
+    }
+    input:checked + label:after {
+      width: 12px;
+      height: 12px;
+      background-color: $primary-color;
+      border-radius: 3px;
+      border: none;
+      left: 4px;
+      transform: unset;
+      top: 2px;
+    }
+  }
+
+  .errorMessage {
+    color: #ff0000;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .formControl {
+    margin-bottom: 10px;
+
+    label {
+      font-size: 16px;
+      gap: 14px;
+
+      &::before {
+        width: 19px;
+        height: 19px;
+        min-width: 19px;
+      }
+    }
+    input:checked + label:after {
+      width: 6px;
+      height: 10px;
+      top: -2px;
+    }
+
+    &.primaryTheme_formcontrol {
+      input:checked + label:after {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .formControl {
+    label {
+      font-size: 13px;
+      gap: 8px;
+
+      &::before {
+        width: 17px;
+        height: 17px;
+        min-width: 17px;
+      }
+    }
+    input:checked + label:after {
+      width: 5px;
+      height: 9px;
+      top: -2px;
+      left: 5.5px;
+    }
+    &.primaryTheme_formcontrol {
+      input:checked + label:after {
+        top: 2px;
+        left: 3px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .formControl {
+    &.primaryTheme_formcontrol {
+      label {
+        font-size: 14px;
+      }
+    }
+  }
+}

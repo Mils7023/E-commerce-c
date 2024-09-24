@@ -1,0 +1,5 @@
+mutation validateCustomer($input: ValidateCustomerInput){
+  validateCustomer(input: $input){
+    message
+  }
+}

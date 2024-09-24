@@ -1,0 +1,50 @@
+@import "../../../styles/colors.scss";
+
+.global_header_spacing {
+  padding-top: 278px;
+}
+.banner_main {
+  padding: 110px 0 140px;
+  background-color: $third-color;
+}
+
+@media (max-width: 1700px) {
+  .global_header_spacing {
+    padding-top: 184px;
+  }
+}
+@media (max-width: 1499.98px) {
+  .global_header_spacing {
+    padding-top: 182px;
+  }
+
+  .banner_main {
+    padding: 90px 0 120px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .global_header_spacing {
+    padding-top: 174px;
+  }
+}
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+  .global_header_spacing {
+    padding-top: 96px;
+  }
+
+  .banner_main {
+    padding: 70px 0 90px;
+  }
+}
+@media (max-width: 575px) {
+  .global_header_spacing {
+    padding-top: 87px;
+  }
+
+  .banner_main {
+    padding: 60px 0 70px;
+  }
+}

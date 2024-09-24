@@ -1,0 +1,344 @@
+@import "../../../styles/colors.scss";
+
+.drawerOpen {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.drawerClose {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+// SEARCH BAR DESIGN STARTS HERE
+.searchBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 4px 22px 0px $main-black-shade1;
+  z-index: 9;
+  padding: 40px 0;
+  border-radius: 0 0 14px 14px;
+  .recentSearch {
+    .recentSearch_products_row {
+      .recentSearch_products_col {
+        &:hover {
+          .recentSearch_product_img {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+        .recentSearch_product_img {
+          width: 160px;
+          overflow: hidden;
+          border: 1px solid $grey-color;
+          img {
+            transition: all 400ms ease-in-out;
+          }
+        }
+        .recentSearch_product_content {
+          width: calc(100% - 160px);
+          padding-left: 24px;
+
+          p {
+            line-height: 130% !important;
+          }
+
+          .recentSearch_product_price {
+            .recentSearch_product_price_label {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* HEADER SEARCHBAR */
+.header_top {
+  background-image: url("#{$media_path}/header-paint-img.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 68px 0 30px;
+  background-color: $main-white;
+}
+.header_search .header_search_wrapper input {
+  background: $third-color;
+  border-radius: 30px;
+  min-width: 750px;
+  padding: 18px 150px 18px 40px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Inter";
+  color: $main-black;
+  border: 1px solid transparent;
+}
+.header_search .header_search_wrapper .search_btn {
+  border-radius: 40px;
+  min-width: 125px;
+}
+.header_search .header_search_wrapper input::placeholder {
+  font-size: 18px;
+  color: $main-black-shade7;
+  font-weight: 400;
+  font-family: "Inter";
+}
+.header_search .header_search_wrapper input:focus {
+  border-color: $primary-color;
+}
+
+@media (max-width: 1700px) {
+  .header_logo {
+    max-width: 160px;
+  }
+  .header_top {
+    background-size: 100% 40px;
+    padding: 35px 0 10px;
+  }
+  .header_search .header_search_wrapper input {
+    padding: 15px 150px 15px 40px;
+    min-width: 650px;
+    font-size: 17px;
+
+    &::placeholder {
+      font-size: 17px;
+    }
+  }
+
+  .header_search .header_search_wrapper .search_btn {
+    padding: 10px 40px;
+  }
+
+  .header_menu .header_menu_list .header_menu_link {
+    padding: 20px 0;
+  }
+  /* TOP HEADER */
+  .header_top .header_icons {
+    gap: 30px;
+  }
+
+  .header_top .header_icons {
+    gap: 20px;
+
+    button {
+      svg {
+        max-width: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1599.98px) {
+  .header_search .header_search_wrapper input {
+    font-size: 16px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  .toppers_shape_submenu_wrapper {
+    .toppers_shape_box {
+      .toppers_shape_title {
+        font-size: 13px;
+        padding: 15px 10px;
+      }
+      .toppers_shape_image {
+        min-height: 230px;
+      }
+    }
+  }
+  .header_top {
+    background-size: 100% 35px;
+  }
+}
+
+@media (max-width: 1499.98px) {
+  .header_menu .header_menu_list .header_submenu {
+    padding: 20px;
+  }
+  .header_menu .header_menu_list .header_menu_link {
+    font-size: 18px;
+  }
+  .toppers_shape_submenu_wrapper {
+    .toppers_shape_box {
+      .toppers_shape_title {
+        font-size: 13px;
+        padding: 15px 8px;
+      }
+    }
+  }
+
+  .cake_toppers_submenu_wrapper {
+    .cake_toppers_left {
+      padding-right: 30px;
+    }
+    .cake_toppers_right {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .cake_toppers_special {
+        .cake_special_toppers_box {
+          width: 100px;
+          height: 100px;
+          .cake_special_toppers_name {
+            margin: 5px;
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .header_search .header_search_wrapper input {
+    min-width: 600px;
+    font-size: 16px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  .header_top .header_icons {
+    gap: 20px;
+  }
+
+  .main_header {
+    // SEARCH BAR DESIGN STARTS HERE
+    .searchBar {
+      .recentSearch {
+        .recentSearch_products_row {
+          .recentSearch_products_col {
+            .recentSearch_product_img {
+              width: 140px;
+            }
+            .recentSearch_product_content {
+              width: calc(100% - 140px);
+              padding-left: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header_search .header_search_wrapper input {
+    min-width: 550px;
+    font-size: 16px;
+    padding: 15px 150px 15px 25px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  .header_top .header_icons {
+    gap: 15px;
+  }
+
+  .header_logo {
+    max-width: 150px;
+  }
+
+  .header_menu .header_menu_list .header_menu_link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header_menu .header_menu_list {
+    .header_menu_link {
+      font-size: 15px;
+      gap: 5px;
+    }
+    .menu_dropdown {
+      max-width: 13px;
+    }
+  }
+  .header_search .header_search_wrapper {
+    input {
+      min-width: 400px;
+      font-size: 14px;
+      padding: 13px 70px 13px 20px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    .search_btn {
+      min-width: 60px;
+      padding: 10px;
+    }
+  }
+  .header_top .header_icons {
+    gap: 10px;
+    button {
+      svg {
+        max-width: 30px;
+      }
+    }
+  }
+
+  .main_header {
+    // SEARCH BAR DESIGN STARTS HERE
+    .searchBar {
+      .recentSearch {
+        .recentSearch_products_row {
+          .recentSearch_products_col {
+            .recentSearch_product_img {
+              width: 100px;
+            }
+            .recentSearch_product_content {
+              width: calc(100% - 100px);
+              padding-left: 10px;
+              p {
+                line-height: 120% !important;
+              }
+
+              .recentSearch_product_price {
+                svg {
+                  max-width: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// SEARCH BAR DESIGN STARTS HERE
+.searchBarMobile {
+  padding: 20px 0 0;
+
+  .recentSearch {
+    .recentSearch_products_row {
+      .recentSearch_products_col {
+        .recentSearch_product_img {
+          width: 100px;
+          border: 1px solid $grey-color;
+        }
+        .recentSearch_product_content {
+          width: calc(100% - 100px);
+          padding-left: 10px;
+
+          // p {
+          //   line-height: 130% !important;
+          // }
+
+          .recentSearch_product_price {
+            svg {
+              max-width: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

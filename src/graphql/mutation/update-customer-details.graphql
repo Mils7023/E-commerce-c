@@ -1,0 +1,13 @@
+mutation updateCustomerDetails($input: CustomerInput!) {
+  updateCustomerV3(input: $input) {
+    customer {
+      firstname
+      email
+      lastname
+      date_of_birth
+      avatar
+      gender
+      phonenumber
+    }
+  }
+}

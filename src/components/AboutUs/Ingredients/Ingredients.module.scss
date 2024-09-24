@@ -1,0 +1,148 @@
+@import "../../../styles/colors.scss";
+
+.indridents_and_usage {
+  .indridents_and_usage_information {
+    padding-top: 50px;
+    .indridents_and_usage_information_image {
+      gap: 80px;
+    }
+  }
+}
+
+.common_about_row {
+  padding-top: 100px;
+  .common_about_content {
+    .ingredients_content {
+      padding-left: 159px;
+    }
+    .ingredients_content_reverse {
+      padding-right: 159px;
+    }
+    .common_about_content_text {
+      padding-top: 25px;
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .common_about_row {
+    .common_about_content_text {
+      font-size: 22px !important;
+      line-height: 33px !important;
+    }
+  }
+}
+@media (max-width: 1499.98px) {
+  .indridents_and_usage {
+    .indridents_and_usage_information_image {
+      gap: 60px;
+      .ingrident_and_usage_src {
+        max-width: 120px;
+      }
+    }
+  }
+
+  .common_about_row {
+    .common_about_content {
+      .ingredients_content {
+        padding-left: 105px;
+      }
+      .ingredients_content_reverse {
+        padding-right: 105px;
+      }
+      .common_about_content_text {
+        padding-top: 15px;
+        font-size: 18px !important;
+        line-height: 27px !important;
+      }
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .indridents_and_usage {
+    .indridents_and_usage_information {
+      padding-top: 40px;
+      .indridents_and_usage_information_image {
+        gap: 50px;
+        .ingrident_and_usage_src {
+          max-width: 100px;
+        }
+      }
+    }
+  }
+
+  .common_about_row {
+    padding-top: 70px;
+    .common_about_content {
+      .ingredients_content {
+        padding-left: 85px;
+      }
+      .ingredients_content_reverse {
+        padding-right: 85px;
+      }
+      .common_about_content_text {
+        padding-top: 10px;
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .common_about_row {
+    .common_about_content {
+      .ingredients_content,
+      .ingredients_content_reverse {
+        padding: 0;
+      }
+      .common_about_content_text {
+        padding-top: 18px;
+        font-size: 18px !important;
+        line-height: 27px !important;
+      }
+    }
+    .common_about_image {
+      padding-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .indridents_and_usage {
+    .indridents_and_usage_information {
+      padding-top: 20px;
+      .indridents_and_usage_information_image {
+        gap: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .indridents_and_usage {
+    .indridents_and_usage_information {
+      .indridents_and_usage_information_image {
+        gap: 10px;
+        .ingrident_and_usage_src {
+          max-width: 60px;
+        }
+      }
+    }
+  }
+
+  .common_about_row {
+    padding-top: 40px;
+    .common_about_content {
+      .common_about_content_text {
+        padding-top: 12px;
+        font-size: 15px !important;
+        line-height: 20px !important;
+      }
+    }
+    .common_about_image {
+      padding-top: 35px;
+    }
+  }
+}

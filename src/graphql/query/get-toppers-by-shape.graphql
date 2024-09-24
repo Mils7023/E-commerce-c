@@ -1,0 +1,23 @@
+query GetToppersByShape {
+  getToppersByShape {
+    items {
+      id
+      uid
+      level
+      name
+      path
+      image_for_header_menu
+      mobile_image_for_home_section
+      desktop_image_for_home_section
+      url_key
+      url_path
+      image
+    }
+    total_count
+    page_info {
+      current_page
+      page_size
+      total_pages
+    }
+  }
+}

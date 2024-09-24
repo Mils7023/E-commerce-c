@@ -1,0 +1,61 @@
+query GetCustomerDetails {
+  customer {
+    firstname
+    lastname
+    suffix
+    email
+    gender
+    default_billing
+    date_of_birth
+    country_code
+    phonenumber
+    avatar
+    addresses {
+      id
+      firstname
+      lastname
+      street
+      city
+      default_billing
+      default_shipping
+      region {
+        region_code
+        region
+      }
+      postcode
+      country_code
+      telephone
+    }
+    wishlist {
+      items_count
+      items {
+        id
+        description
+        product {
+          id
+          uid
+          name
+          sku
+          url_key
+          thumbnail {
+            url
+          }
+          price_range {
+            minimum_price {
+              final_price {
+                currency
+                value
+              }
+            }
+            maximum_price {
+              final_price {
+                currency
+                value
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

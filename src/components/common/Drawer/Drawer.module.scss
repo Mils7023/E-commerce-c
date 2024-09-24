@@ -1,0 +1,93 @@
+@import "../../../styles/colors.scss";
+
+.drawerMain {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 630px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  &.drawerOpen {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+  .drawerContent {
+    height: 100vh;
+    background-color: $main-white;
+    margin-left: auto;
+    overflow: auto;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(100%);
+    &.drawerOpenContent {
+      transform: translateX(0);
+    }
+    // .drawerHeader {
+    //   padding: 18px 50px;
+    //   border-bottom: 1px solid $main-black-shade5;
+    // }
+    .drawerBody {
+      padding: 48px 50px;
+    }
+  }
+}
+.drawerOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $main-black-shade3;
+  z-index: 99;
+  opacity: 1;
+  height: 100vh;
+  &.overlayHidden {
+    opacity: 0;
+    display: none;
+  }
+}
+@media (max-width: 1700px) {
+  .drawerMain {
+    width: 600px;
+    .drawerContent {
+      // max-width: 600px;
+    }
+  }
+}
+@media (max-width: 1499.98px) {
+  .drawerMain {
+    .drawerContent {
+      .drawerBody {
+        padding: 40px 50px;
+      }
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .drawerMain {
+    width: 500px;
+    .drawerContent {
+      // max-width: 500px;
+      .drawerBody {
+        padding: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .drawerMain {
+    width: 100%;
+    .drawerContent {
+      height: 100%;
+      > div {
+        height: calc(100vh - 10px);
+      }
+      .drawerBody {
+        padding: 30px 20px 40px;
+      }
+    }
+  }
+}

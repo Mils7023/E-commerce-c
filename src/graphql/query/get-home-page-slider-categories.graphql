@@ -1,0 +1,12 @@
+query getHomePageSliderCategories {
+  getHomePageSliderCategories {
+    items {
+      id
+      uid
+      name
+      url_key
+      url_path
+      image
+    }
+  }
+}
